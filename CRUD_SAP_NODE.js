@@ -82,39 +82,41 @@ client.connect(function(err) {
   // });
 
 // ZSD_CP_PRICE_CREATE_MULTIPLE
-  client.invoke("ZSD_CP_PRICE_CREATE_MULTIPLE", 
-[  {P_PLANT: "1000", 
-  P_MATERIAL: "APPLE_RED", 
-  P_CUSTOMER: "100001",
-  P_RATE: "200",
-  P_CURRENCY: "INR",
-  P_PRICE_UNIT: "1",
-  P_COND_UNIT: "KG",
-  P_PORTAL_USER: "DURAI_V"
-  }, 
-  {P_PLANT: "2000", 
-  P_MATERIAL: "APPLE_RED", 
-  P_CUSTOMER: "100001",
-  P_RATE: "10",
-  P_CURRENCY: "USD",
-  P_PRICE_UNIT: "3",
-  P_COND_UNIT: "KG",
-  P_PORTAL_USER: "DURAI_V"
-  }, 
-  {P_PLANT: "3000", 
-  P_MATERIAL: "APPLE_RED", 
-  P_CUSTOMER: "100001",
-  P_RATE: "9",
-  P_CURRENCY: "EUR",
-  P_PRICE_UNIT: "1",
-  P_COND_UNIT: "KG",
-  P_PORTAL_USER: "DURAI_V"
-  }], function(err, res){
-    if (err) {
-      return console.log("Error ", err);
-    }
-    console.log("ZSD_CP_PRICE_CREATE_MULTIPLE_RESULT ", res);
-  });
+//   client.invoke("ZSD_CP_PRICE_CREATE_MULTIPLE", 
+//   {T_PRICE_CREATE:[
+//   {PLANT: "1000", 
+//   MATERIAL: "APPLE_RED", 
+//   CUSTOMER: "100001",
+//   RATE: "200",
+//   CURRENCY: "INR",
+//   PRICE_UNIT: "1",
+//   COND_UNIT: "KG",
+//   PORTAL_USER: "DURAI_V"
+//   }, 
+//   {PLANT: "2000", 
+//   MATERIAL: "APPLE_RED", 
+//   CUSTOMER: "100001",
+//   RATE: "10",
+//   CURRENCY: "USD",
+//   PRICE_UNIT: "3",
+//   COND_UNIT: "KG",
+//   PORTAL_USER: "DURAI_V"
+//   }, 
+//   {PLANT: "3000", 
+//   MATERIAL: "APPLE_RED", 
+//   CUSTOMER: "100001",
+//   RATE: "9",
+//   CURRENCY: "EUR",
+//   PRICE_UNIT: "1",
+//   COND_UNIT: "KG",
+//   PORTAL_USER: "DURAI_V"
+//   }
+//   ]}, function(err, res){
+//     if (err) {
+//       return console.log("Error ", err);
+//     }
+//     console.log("ZSD_CP_PRICE_CREATE_MULTIPLE_RESULT ", res);
+//   });
 
 // ZSD_CP_PRICE_GET_PLANT
   // client.invoke("ZSD_CP_PRICE_GET_PLANT", 
@@ -126,51 +128,51 @@ client.connect(function(err) {
   //   console.log("ZSD_CP_PRICE_GET_RESULT ", res);
   // });
 
-// ZSD_CP_PRICE_CREATE_MULTIPLE
-  // client.invoke("ZSD_CP_PRICE_CREATE_MULTIPLE_T_PRICE_CREATE", 
-  // [
-  // {P_PLANT: "1000", 
-  // P_MATERIAL: "APPLE_RED", 
-  // P_CUSTOMER: "100001",
-  // P_RATE: "200",
-  // P_CURRENCY: "INR",
-  // P_PRICE_UNIT: "1",
-  // P_COND_UNIT: "KG",
-  // P_PORTAL_USER: "DURAI_V"
+// ZSD_CP_PRICE_CHANGE_MULTIPLE
+  // client.invoke("ZSD_CP_PRICE_CHANGE_MULTIPLE", 
+  // {T_PRICE_CHANGE:[
+  // {PLANT: "1000", 
+  // MATERIAL: "APPLE_S", 
+  // CUSTOMER: "100001",
+  // RATE: "250",
+  // CURRENCY: "INR",
+  // PRICE_UNIT: "1",
+  // COND_UNIT: "KG",
+  // PORTAL_USER: "DURAI_V"
   // },
-  // {P_PLANT: "2000", 
-  // P_MATERIAL: "APPLE_RED", 
-  // P_CUSTOMER: "100001",
-  // P_RATE: "10",
-  // P_CURRENCY: "USD",
-  // P_PRICE_UNIT: "3",
-  // P_COND_UNIT: "KG",
-  // P_PORTAL_USER: "DURAI_V"
+  // {PLANT: "2000", 
+  // MATERIAL: "APPLE_A", 
+  // CUSTOMER: "100001",
+  // RATE: "12",
+  // CURRENCY: "USD",
+  // PRICE_UNIT: "3",
+  // COND_UNIT: "KG",
+  // PORTAL_USER: "DURAI_V"
   // },
-  // {P_PLANT: "4000", 
-  // P_MATERIAL: "APPLE_RED", 
-  // P_CUSTOMER: "100001",
-  // P_RATE: "9",
-  // P_CURRENCY: "EUR",
-  // P_PRICE_UNIT: "1",
-  // P_COND_UNIT: "KG",
-  // P_PORTAL_USER: "DURAI_V"
+  // {PLANT: "4000", 
+  // MATERIAL: "APPLE_RED", 
+  // CUSTOMER: "100001",
+  // RATE: "9",
+  // CURRENCY: "EUR",
+  // PRICE_UNIT: "1",
+  // COND_UNIT: "KG",
+  // PORTAL_USER: "DURAI_V"
   // }
-  // ], function(err, res) {
+  // ]}, function(err, res) {
   //   if (err) {
   //     return console.log("Error ", err);
   //   }
-  //   console.log("ZSD_CP_PRICE_CREATE_MULTIPLE_RESULT ", res);
+  //   console.log("ZSD_CP_PRICE_CHANGE_MULTIPLE_RESULT ", res);
   // });
 
 // ZSD_CP_PRICE_GET_ALL
-  // client.invoke("ZSD_CP_PRICE_GET_ALL", 
-  // {}, function(err, res) {
-  //   if (err) {
-  //     console.log("Error ", err);
-  //   }
-  //   console.log("ZSD_CP_PRICE_GET_ALL_RESULT ", res);
-  // });
+  client.invoke("ZSD_CP_PRICE_GET_ALL", 
+  {}, function(err, res) {
+    if (err) {
+      console.log("Error ", err);
+    }
+    console.log("ZSD_CP_PRICE_GET_ALL_RESULT ", res);
+  });
 });
 
 
